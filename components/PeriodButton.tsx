@@ -1,7 +1,7 @@
-﻿import React, {useEffect} from 'react';
+﻿import React, { useEffect } from 'react';
 
-import {TouchableOpacity, Text, StyleSheet, GestureResponderEvent, Pressable} from 'react-native';
-import Animated, {AnimatableValue, useAnimatedStyle, useSharedValue, withTiming} from "react-native-reanimated";
+import { GestureResponderEvent, Pressable, StyleSheet, Text } from 'react-native';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from "react-native-reanimated";
 
 type PeriodButtonProps = {
     delay: any;

@@ -1,10 +1,8 @@
-﻿import {View, Text, ImageBackground, ScrollView, StyleSheet, TouchableOpacity} from "react-native";
-import {Button} from "@react-navigation/elements";
-import {useNavigation} from "@react-navigation/native";
-import {SafeAreaView} from "react-native-safe-area-context";
-import ClassicalButton from "@/components/ClassicalButton";
-import PeriodButton from "@/components/PeriodButton";
+﻿import PeriodButton from "@/components/PeriodButton";
 import Ribbon from "@/components/Ribbon";
+import { useNavigation } from "@react-navigation/native";
+import { ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function PeriodScreen() {
     const Navigation = useNavigation();
@@ -42,40 +40,6 @@ export default function PeriodScreen() {
                 <View style={{ position: "absolute", top: 975, left: 80 }}>
                     <PeriodButton delay={3000} label={"20eme Siecle"} onPress={() => {Navigation.navigate('PeriodScreen')}} />
                 </View>
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 15eme siecle, Doullens, Ville Frontiere"} onPress={() => Navigation.navigate('FifteenthCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 16eme siecle, Le Projet de Francois Premier"} onPress={() => Navigation.navigate('SixteenthCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 17eme siecle, De Citadelle a Caserne"} onPress={() => Navigation.navigate('SeventeenthCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 18eme siecle, De Caserne a Prison"} onPress={() => Navigation.navigate('EighteenthCentuery')} >*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 19eme siecle, Doullens, site carceral"} onPress={() => Navigation.navigate('NineteenthCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 20eme siecle, des 2 guerres mondiales au harkis"} onPress={() => Navigation.navigate('TwentythCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
-
-                {/*<View style={styles.container}>*/}
-                {/*    <ClassicalButton label={"Au 21eme siecle, De l'abandon a la redecouverte"} onPress={() => Navigation.navigate('TwentyFirstCentuery')}>*/}
-                {/*    </ClassicalButton>*/}
-                {/*</View>*/}
             </SafeAreaView>
         </ScrollView>
     )

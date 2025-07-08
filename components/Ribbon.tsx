@@ -1,11 +1,11 @@
 ﻿import React, { useEffect } from 'react';
-import { Dimensions, StyleSheet, View } from 'react-native';
-import Svg, { Path } from 'react-native-svg';
+import { Dimensions, View } from 'react-native';
 import Animated, {
-    useSharedValue,
     useAnimatedProps,
+    useSharedValue,
     withTiming,
 } from 'react-native-reanimated';
+import Svg, { Path } from 'react-native-svg';
 
 const { width: screenWidth, height: screenHeight } = Dimensions.get('window');
 const AnimatedPath = Animated.createAnimatedComponent(Path);

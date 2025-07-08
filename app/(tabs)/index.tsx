@@ -1,13 +1,8 @@
 import { Image } from 'expo-image';
-import {Button, Text, ImageBackground, Platform, StyleSheet, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-import ParallaxScrollView from '@/components/ParallaxScrollView';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import {ThemedButton} from "@/components/ThemedButton";
-import { useNavigation } from '@react-navigation/native';
 import ClassicalButton from "@/components/ClassicalButton";
-import {SafeAreaView} from "react-native-safe-area-context";
+import { useNavigation } from '@react-navigation/native';
 
 export default function HomeScreen() {
     const Navigation = useNavigation();
@@ -25,7 +20,7 @@ export default function HomeScreen() {
                              Notre application pour explorer la vieille citadelle
                          </Text>
                      </View>
-                  <ClassicalButton onPress={() => {Navigation.navigate('PeriodScreen')}} label={"Frise Chronologique"} />
+                  <ClassicalButton onPress={() => {Navigation.navigate("PeriodScreen")}} label={"Frise Chronologique"} />
                   <ClassicalButton onPress={() => {}} label={"Exploration Thematique"} />
                   <ClassicalButton onPress={() => {}} label={"Se situer dans la Citadelle"} />
 

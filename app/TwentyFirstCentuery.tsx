@@ -1,17 +1,15 @@
-﻿import {ScrollView, StyleSheet, TouchableOpacity} from "react-native";
-import {ThemedText} from "@/components/ThemedText";
-import {ThemedView} from "@/components/ThemedView";
-import { ThemedButton } from "@/components/ThemedButton";
+﻿import { ScrollView, StyleSheet, Text, View } from "react-native";
+
 
 export default function SixteenthCentuery() {
 
     return (
         <ScrollView>
-            <ThemedView style="titleContainer">
-                <ThemedText>
+            <View style={styles.titleContainer}>
+                <Text>
                     Doullens, témoin de l’évolution des fortifications
-                </ThemedText>
-                <ThemedText style="stepContainer">
+                </Text>
+                <Text style={styles.stepContainer}>
                     La haute enceinte circulaire qui dominait l'architecture militaire au Moyen
                     Âge s'avéra vulnérable aux tirs de canon dès lors que se développa la puissance
                     de l’artillerie à poudre. A la fin du XV e siècle, les principes qui régissaient
@@ -23,8 +21,8 @@ export default function SixteenthCentuery() {
                     principes de fortifications apparurent d’abord en Italie avant de se diffuser au
                     nord des Alpes à partir des années 1530-1540, Doullens étant l’un des exemples
                     les plus précoces de leur adoption en France.
-                </ThemedText>
-            </ThemedView>
+                </Text>
+            </View>
         </ScrollView>
     )
 }

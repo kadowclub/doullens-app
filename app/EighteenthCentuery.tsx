@@ -1,9 +1,6 @@
-﻿import {Dimensions, ScrollView, Text, StyleSheet, TouchableOpacity, View, ImageBackground} from "react-native";
-import {ThemedText} from "@/components/ThemedText";
-import {ThemedView} from "@/components/ThemedView";
-import { ThemedButton } from "@/components/ThemedButton";
-import {SafeAreaView} from "react-native-safe-area-context";
-import {Image} from "expo-image";
+﻿import { Image } from "expo-image";
+import { Dimensions, ImageBackground, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function EighteenthCentuery() {
 

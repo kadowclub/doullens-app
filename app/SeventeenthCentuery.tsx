@@ -1,18 +1,16 @@
-﻿import {ScrollView, StyleSheet, TouchableOpacity} from "react-native";
-import {ThemedText} from "@/components/ThemedText";
-import {ThemedView} from "@/components/ThemedView";
-import { ThemedButton } from "@/components/ThemedButton";
+﻿import { ScrollView, StyleSheet, Text, View } from "react-native";
+
 
 export default function SixteenthCentuery() {
 
     return (
         <ScrollView>
-            <ThemedView style="titleContainer">
-                <ThemedText>
+            <View style={styles.titleContainer}>
+                <Text>
                     Au XVII e siècle : de la citadelle à la caserne
-                </ThemedText>
-            </ThemedView>
-            <ThemedText style="stepContainer">
+                </Text>
+            </View>
+            <Text style={styles.stepContainer}>
                 Le règne de Louis XIII (1610-1643) fut marqué par la construction de
                 cinq ouvrages avancés appelés « demi-lunes » venant achever le
                 perfectionnement du système défensif. Mais, par la suite, les conquêtes
@@ -20,7 +18,7 @@ export default function SixteenthCentuery() {
                 Est, Doullens perdit sa fonction stratégique. Dès lors, la citadelle devint place de
                 garnison, à une époque où les armées royales avaient abandonné le logement des
                 troupes chez l’habitant pour choisir le casernement.
-            </ThemedText>
+            </Text>
         </ScrollView>
     )
 }

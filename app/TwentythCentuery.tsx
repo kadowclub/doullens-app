@@ -1,17 +1,14 @@
-﻿import {ScrollView, StyleSheet, TouchableOpacity} from "react-native";
-import {ThemedText} from "@/components/ThemedText";
-import {ThemedView} from "@/components/ThemedView";
-import { ThemedButton } from "@/components/ThemedButton";
+﻿import { ScrollView, StyleSheet, Text, View } from "react-native";
 
 export default function SixteenthCentuery() {
 
     return (
         <ScrollView>
-            <ThemedView style="titleContainer">
-                <ThemedText>
+            <View style={styles.titleContainer}>
+                <Text>
                     Le projet de François I er (1530)
-                </ThemedText>
-                <ThemedText style="stepContainer">
+                </Text>
+                <Text style={styles.stepContainer}>
                     Le conflit opposant, au XV e siècle, la Maison royale de France et la
                     Maison ducale de Bourgogne transforma en forteresses de frontières les villes
                     placées sur une ligne qui suivait la vallée de la Somme : Doullens étaient de
@@ -21,8 +18,8 @@ export default function SixteenthCentuery() {
                     d’affrontement entre la Maison de France et la Maison d’Autriche, et Doullens,
                     place de la ligne défensive française située la plus au nord revêtit une
                     importance stratégique croissante.
-                </ThemedText>
-            </ThemedView>
+                </Text>
+            </View>
         </ScrollView>
     )
 }
