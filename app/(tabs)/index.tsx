@@ -43,6 +43,7 @@ export default function HomeScreen() {
         <Animated.View style={[styles.drawer, drawerStyle]}>
             <Menu close={1} onPressProps={closeDrawer}></Menu>
             <View style={styles.drawerContainer}>
+                <MenuButton label={"Programmes de la Citadelle"} onPress={() => {}}></MenuButton>
                 <MenuButton label={"Langues"} onPress={() => {}}></MenuButton>
                 <MenuButton label={"Contacts"} onPress={() => {}}></MenuButton>
                 <MenuButton label={"Mentions Legales"} onPress={() => {}}></MenuButton>

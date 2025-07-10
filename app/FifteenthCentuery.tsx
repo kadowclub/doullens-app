@@ -1,6 +1,7 @@
-﻿import {Dimensions, ScrollView, Text, StyleSheet, TouchableOpacity, View, ImageBackground} from "react-native";
-import {SafeAreaView} from "react-native-safe-area-context";
+﻿import AudioButton from "@/components/AudioButton";
 import ClassicalButton from "@/components/ClassicalButton";
+import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SixteenthCentuery() {
 
@@ -16,6 +17,9 @@ export default function SixteenthCentuery() {
                             XVe siècle
                         </Text>
                     </View>
+                    <View>
+                        <Image source={require('../assets/images/map.jpg')} style={styles.image} />
+                    </View>
                     <Text style={styles.paragraph}>
                         Le conflit opposant, au XV e siècle, la Maison royale de France et la
                         Maison ducale de Bourgogne transforma en forteresses de frontières les villes
@@ -30,8 +34,12 @@ export default function SixteenthCentuery() {
                         place de la ligne défensive française située la plus au nord revêtit une
                         importance stratégique croissante.
                     </Text>
+                    <View>
+                        <Image source={require('../assets/images/soldier.jpg')} style={styles.image} />
+                    </View>
                     <ClassicalButton label={"Next one"} onPress={() => {}}></ClassicalButton>
                 </ScrollView>
+                <AudioButton label={""} onPress={() => {}}></AudioButton>
             </View>
         </SafeAreaView>
     )
@@ -76,4 +84,8 @@ const styles = StyleSheet.create({
         marginBottom: 18,
         letterSpacing: 0.3,
     },
+    image: {
+        height: 400,
+        width: "auto",
+    }
 });
