@@ -7,7 +7,7 @@ type ClassicButtonProps = {
     onPress: (event: GestureResponderEvent) => void;
 };
 
-const ClassicButton: React.FC<ClassicButtonProps> = ({ label, onPress }) => {
+const MenuButton: React.FC<ClassicButtonProps> = ({ label, onPress }) => {
     return (
         <TouchableOpacity style={styles.button} onPress={onPress} activeOpacity={0.7}>
             <Text style={styles.text}>{label}</Text>
@@ -15,26 +15,16 @@ const ClassicButton: React.FC<ClassicButtonProps> = ({ label, onPress }) => {
     );
 };
 
-export default ClassicButton;
+export default MenuButton;
 
 
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#E5E5E5', // Light stone tone
-        borderColor: '#999999',
-        borderWidth: 1,
-        borderRadius: 6,
         paddingVertical: 12,
         paddingHorizontal: 24,
         alignItems: 'center',
         marginTop: 30,
-        marginHorizontal: 20,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.15,
-        shadowRadius: 3,
-        elevation: 3,
 
     },
     text: {

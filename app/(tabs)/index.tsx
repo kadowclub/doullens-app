@@ -1,14 +1,55 @@
 import { Image } from 'expo-image';
-import { StyleSheet, Text, View } from 'react-native';
+import { Dimensions, StyleSheet, Text, View } from 'react-native';
 
 import ClassicalButton from "@/components/ClassicalButton";
+import MenuButton from '@/components/MenuButton';
+import Menu from '@/components/ui/Menu';
 import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
+
+
+const SCREEN_WIDTH = Dimensions.get('window').width;
+const DRAWER_WIDTH = SCREEN_WIDTH * 0.75;
+
+
+function Drawer() {
+
+    return (
+        <View style={styles.drawer}>
+        </View>
+    )
+}
+
 
 export default function HomeScreen() {
     const Navigation = useNavigation();
 
+    const translateX = useSharedValue(-DRAWER_WIDTH);
+
+    const openDrawer = () => {
+        translateX.value = withTiming(0, { duration: 300 });
+    };
+    const closeDrawer = () => {
+        translateX.value = withTiming(-DRAWER_WIDTH, { duration: 300 });
+    };
+    const drawerStyle = useAnimatedStyle(() => ({
+        transform: [{ translateX: translateX.value }],
+    }));
+
+
   return (
       <View style={styles.container} >
+        <Animated.View style={[styles.drawer, drawerStyle]}>
+            <Menu close={1} onPressProps={closeDrawer}></Menu>
+            <View style={styles.drawerContainer}>
+                <MenuButton label={"Langues"} onPress={() => {}}></MenuButton>
+                <MenuButton label={"Contacts"} onPress={() => {}}></MenuButton>
+                <MenuButton label={"Mentions Legales"} onPress={() => {}}></MenuButton>
+                <MenuButton label={"Options"} onPress={() => {}}></MenuButton>
+            </View>
+        </Animated.View>
+        <Menu close={0} onPressProps={openDrawer}></Menu>
 
               <Image source={require('@/assets/images/citadelle-header.jpg')} style={{ width: '100%', height: '40%' }} />
               <View style={styles.textContainer}>
@@ -71,5 +112,23 @@ textContainer: {
     flex: 1,
     },
 
+    drawer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: DRAWER_WIDTH,
+    height: '100%',
+    borderBottomRightRadius: '60%',
+    backgroundColor: '#f08777',
+    padding: 20,
+    zIndex: 5,
+    },
+
+    drawerContainer: {
+        flex: 1,
+        zIndex: 6,
+        elevation: 5,
+        paddingTop: 75,
+    }
 
 });
