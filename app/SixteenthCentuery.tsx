@@ -42,17 +42,7 @@ Ces nouveautés étaient une réponse aux progrès de l’artillerie
                         <ClassicalButton label={"Precedent"} onPress={() => {Navigation.navigate("FifteenthCentuery")}}></ClassicalButton>
                         <ClassicalButton label={"Suivant"} onPress={() => {Navigation.navigate("SixteenthCentuery")}}></ClassicalButton>
                     </View>
-                    <View style={styles.buttonRow}>
-                        <TouchableOpacity style={styles.button} onPress={() => changePage("prev")}>
-                        <Ionicons name="arrow-forward-outline" />
-                        <Text style={styles.buttonText}>Previous</Text>
-                        </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.button} onPress={() => changePage("next")}>
-                        <Text style={styles.buttonText}>Next</Text>
-                        <Ionicons name="arrow-forward-outline" />
-                        </TouchableOpacity>
-                    </View>
                 </ScrollView>
                 <AudioButton label={""} onPress={() => {}}></AudioButton>
             </View>
