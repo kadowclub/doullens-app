@@ -4,22 +4,16 @@ import { Dimensions, StyleSheet, Text, View } from 'react-native';
 import ClassicalButton from "@/components/ClassicalButton";
 import MenuButton from '@/components/MenuButton';
 import Menu from '@/components/ui/Menu';
+import { Spearator } from '@/components/ui/Separator';
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 
 
+
 const SCREEN_WIDTH = Dimensions.get('window').width;
 const DRAWER_WIDTH = SCREEN_WIDTH * 0.75;
 
-
-function Drawer() {
-
-    return (
-        <View style={styles.drawer}>
-        </View>
-    )
-}
 
 
 export default function HomeScreen() {
@@ -38,15 +32,20 @@ export default function HomeScreen() {
     }));
 
 
+
   return (
       <View style={styles.container} >
         <Animated.View style={[styles.drawer, drawerStyle]}>
             <Menu close={1} onPressProps={closeDrawer}></Menu>
             <View style={styles.drawerContainer}>
                 <MenuButton label={"Programmes de la Citadelle"} onPress={() => {}}></MenuButton>
+                <Spearator></Spearator>
                 <MenuButton label={"Langues"} onPress={() => {}}></MenuButton>
+                <Spearator></Spearator>
                 <MenuButton label={"Contacts"} onPress={() => {}}></MenuButton>
+                <Spearator></Spearator>
                 <MenuButton label={"Mentions Legales"} onPress={() => {}}></MenuButton>
+                <Spearator></Spearator>
                 <MenuButton label={"Options"} onPress={() => {}}></MenuButton>
             </View>
         </Animated.View>
@@ -64,7 +63,7 @@ export default function HomeScreen() {
                      </View>
                   <ClassicalButton onPress={() => {Navigation.navigate("PeriodScreen")}} label={"Frise Chronologique"} />
                   <ClassicalButton onPress={() => {}} label={"Exploration Thematique"} />
-                  <ClassicalButton onPress={() => {}} label={"Se situer dans la Citadelle"} />
+                  <ClassicalButton onPress={() => {Navigation.navigate("ExploreScreen")}} label={"Se situer dans la Citadelle"} />
 
                   <View style={styles.menu}>
                       <Image source={require("@/assets/images/Screenshot 2025-06-10 235612.png")} style={{ width: 80, height: 80, alignSelf: "flex-end" }}></Image>
@@ -119,10 +118,13 @@ textContainer: {
     left: 0,
     width: DRAWER_WIDTH,
     height: '100%',
-    borderBottomRightRadius: '60%',
+    // borderBottomRightRadius: '60%',
     backgroundColor: '#f08777',
     padding: 20,
     zIndex: 5,
+    },
+    drawerText: {
+        color: 'white',
     },
 
     drawerContainer: {

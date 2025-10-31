@@ -22,7 +22,7 @@ export default function PeriodScreen() {
                 </View>
 
                 <View style={{ position: "absolute", top: 260, left: 150 }}>
-                    <PeriodButton delay={1000} label={"16eme Siecle"} onPress={() => {Navigation.navigate('PeriodScreen')}} />
+                    <PeriodButton delay={1000} label={"16eme Siecle"} onPress={() => {Navigation.navigate('SixteenthCentuery')}} />
                 </View>
 
                 <View style={{ position: "absolute", top: 440, left: 20 }}>

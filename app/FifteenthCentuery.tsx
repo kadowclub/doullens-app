@@ -1,9 +1,18 @@
 ﻿import AudioButton from "@/components/AudioButton";
 import ClassicalButton from "@/components/ClassicalButton";
+import { useNavigation } from "expo-router";
+import { useMemo } from "react";
 import { Dimensions, Image, ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SixteenthCentuery() {
+  const { width: screenWidth, height: screenHeight } = useMemo(
+    () => Dimensions.get('window'),
+    []
+  );
+
+  const Navigation = useNavigation()
+
 
     return (
         <SafeAreaView style={styles.background} >
@@ -34,10 +43,19 @@ export default function SixteenthCentuery() {
                         place de la ligne défensive française située la plus au nord revêtit une
                         importance stratégique croissante.
                     </Text>
-                    <View>
-                        <Image source={require('../assets/images/soldier.jpg')} style={styles.image} />
+                    <Image source={require('../assets/images/soldier.jpg')} style={styles.image} />
+                    <ClassicalButton label={"Next one"} onPress={() => {Navigation.navigate("SixteenthCentuery")}}></ClassicalButton>
+                    <View style={styles.buttonRow}>
+                        {/* <TouchableOpacity style={styles.button} onPress={() => changePage("prev")}>
+                        <Ionicons name="arrow-forward-outline" />
+                        <Text style={styles.buttonText}>Previous</Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={styles.button} onPress={() => changePage("next")}>
+                        <Text style={styles.buttonText}>Next</Text>
+                        <Ionicons name="arrow-forward-outline" />
+                        </TouchableOpacity> */}
                     </View>
-                    <ClassicalButton label={"Next one"} onPress={() => {}}></ClassicalButton>
                 </ScrollView>
                 <AudioButton label={""} onPress={() => {}}></AudioButton>
             </View>
@@ -53,16 +71,34 @@ const styles = StyleSheet.create({
     },
     safeArea: {
         flex: 1,
+    },  
+  buttonRow: {
+    flexDirection: "row",
+    gap: 10,
+    marginTop: 20,
+  },
+    button: {
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor: "#2f2f2f",
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 50,
     },
+    mapImage: {
+    width: 2000,
+    height: 1500,
+  },
+    buttonText: {
+    color: "#fff",
+    marginHorizontal: 5,
+  },
     background: {
         backgroundColor: '#f2efe9',
         flex: 1,
-        marginBottom: 20,
     },
     scrollContainer: {
         paddingHorizontal: 20,
-        paddingVertical: 30,
-
         borderStyle: 'solid',
         borderColor: '#ed6955',
         borderTopWidth: 10,

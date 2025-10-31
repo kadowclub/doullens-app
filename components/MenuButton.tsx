@@ -25,13 +25,11 @@ const styles = StyleSheet.create({
         paddingHorizontal: 24,
         alignItems: 'center',
         marginTop: 30,
-
     },
     text: {
-        color: '#333333',
+        color: 'white',
         fontSize: 18,
         fontWeight: '600',
-        // fontFamily: 'serif', // Use a custom font if you want a more authentic style
         textAlign: 'center',
     },
 });
