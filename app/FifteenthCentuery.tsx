@@ -46,15 +46,7 @@ export default function SixteenthCentuery() {
                     <Image source={require('../assets/images/soldier.jpg')} style={styles.image} />
                     <ClassicalButton label={"Next one"} onPress={() => {Navigation.navigate("SixteenthCentuery")}}></ClassicalButton>
                     <View style={styles.buttonRow}>
-                        {/* <TouchableOpacity style={styles.button} onPress={() => changePage("prev")}>
-                        <Ionicons name="arrow-forward-outline" />
-                        <Text style={styles.buttonText}>Previous</Text>
-                        </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.button} onPress={() => changePage("next")}>
-                        <Text style={styles.buttonText}>Next</Text>
-                        <Ionicons name="arrow-forward-outline" />
-                        </TouchableOpacity> */}
                     </View>
                 </ScrollView>
                 <AudioButton label={""} onPress={() => {}}></AudioButton>
