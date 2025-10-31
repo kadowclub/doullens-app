@@ -1,8 +1,9 @@
 ﻿import AudioButton from "@/components/AudioButton";
 import ClassicalButton from "@/components/ClassicalButton";
+import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "expo-router";
 import { useMemo } from "react";
-import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Dimensions, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function SixteenthCentuery() {
@@ -42,7 +43,7 @@ Ces nouveautés étaient une réponse aux progrès de l’artillerie
                         <ClassicalButton label={"Suivant"} onPress={() => {Navigation.navigate("SixteenthCentuery")}}></ClassicalButton>
                     </View>
                     <View style={styles.buttonRow}>
-                        {/* <TouchableOpacity style={styles.button} onPress={() => changePage("prev")}>
+                        <TouchableOpacity style={styles.button} onPress={() => changePage("prev")}>
                         <Ionicons name="arrow-forward-outline" />
                         <Text style={styles.buttonText}>Previous</Text>
                         </TouchableOpacity>
@@ -50,7 +51,7 @@ Ces nouveautés étaient une réponse aux progrès de l’artillerie
                         <TouchableOpacity style={styles.button} onPress={() => changePage("next")}>
                         <Text style={styles.buttonText}>Next</Text>
                         <Ionicons name="arrow-forward-outline" />
-                        </TouchableOpacity> */}
+                        </TouchableOpacity>
                     </View>
                 </ScrollView>
                 <AudioButton label={""} onPress={() => {}}></AudioButton>
